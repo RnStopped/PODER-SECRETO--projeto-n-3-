@@ -1,0 +1,351 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/*------------------------- HEADER -------------------------*/
+
+nav {
+  /* width: 100vw;
+  height: 8vh; */
+  
+  margin-top: 1.063rem;
+  padding: 1.25rem;
+padding-left: 6.25rem;
+padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  --hover-color: #932525;
+}
+
+.img-logo {
+  height: 3.125rem;
+}
+
+.navbar {
+  margin: 0px 1.688rem 0px 1.688rem;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar:hover {
+  color: var(--hover-color);
+  transform: translateY(-1px);
+  transition: 0.2s cubic-bezier(0.56, -0.12, 0.27, 0.91);
+}
+
+.navbar:first-of-type {
+  text-shadow: 0px 2px 5px #932525;
+  color: #c92412;
+  font-weight: 700;
+}
+
+.navbar:first-of-type:hover {
+  color: #640909;
+}
+a {
+  cursor: pointer;
+}
+
+.inputGroup {
+  font-family: "Segoe UI", sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 190px;
+  position: relative;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.73em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(209, 203, 203);
+}
+
+.inputGroup :is(input:focus, input:valid) ~ label {
+  transform: translateY(-80%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(200, 150, 150);
+}
+
+/* ------------------------- BODY -------------------------*/
+
+body {
+  background-image: url(./assets/fun2do.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  --paragrafo-color: rgb(150, 55, 55);
+
+  /*
+  da uma olhadinha de como fica sem o overflow:
+  
+  overflow: hidden; 
+
+  creio que o problema esta em alguma parte desse body, ou está na "main" 
+  */
+}
+
+/* 
+eu até encontrei uma solução, mas não gostei do resultado,
+porq eu tenho que repetir o background, mas até que funcionou,
+só desfazer o comentario que o codigo funciona😁 
+ 
+  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+*/
+
+/* 
+body{background-repeat: repeat;}
+body::-webkit-scrollbar  {display: none; } 
+*/
+
+main {
+  font-weight: 400;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 90px;
+  padding-left: 6.25rem;
+
+ 
+}
+
+h3 {
+  color: white;
+  position: relative;
+  top: -40px;
+  font-size: 23px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 900;
+  margin-left: 4px;
+  text-shadow: 0px 2px 5px #c92412;
+  margin-bottom: -18px;
+  color: #c92412;
+}
+
+h1 {
+  font-size: 70px;
+  color: aliceblue;
+}
+
+p {
+  margin-top: 20px;
+  color: rgb(167, 173, 177);
+  width: 1000px;
+}
+
+/*------------------------- BOTÕES -------------------------*/
+
+.botoes {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.botao-assistir {
+  height: 4.4vh;
+  width: 17.8vw;
+  background-color: rgb(131, 14, 14);
+  border: none;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+.botao-assistir:hover {
+  background-color: rgb(109, 8, 8);
+  transition: 0.3s cubic-bezier(0.56, -0.12, 0.27, 0.91);
+  height: 4.6vh;
+  width: 18vw;
+  font-size: 13.8px;
+}
+
+.botao-assistir img {
+  margin-left: 7px;
+}
+
+#botao-lista {
+  height: 4.4vh;
+  width: 17.8vw;
+  margin-left: 20px;
+  text-transform: uppercase;
+  border: none;
+  font-size: 13.5px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #00000000;
+  border: solid white;
+  border-width: 2px;
+}
+
+#botao-lista:hover {
+  transition: 0.3s cubic-bezier(0.56, -0.12, 0.27, 0.91);
+  height: 4.6vh;
+  width: 18vw;
+  font-size: 13.8px;
+}
+
+/* -------------------------IFRAME------------------------- */
+
+.iFrame {
+  margin-top: 30px;
+margin-bottom: 30px;
+}
+
+iframe {
+  border: solid rgb(109, 8, 8) 3px;
+  border-radius: 7px;
+  filter: drop-shadow(2px 1px 10px #640909);
+   
+  min-width: 100px;
+  max-width: 514px;
+  min-height: 140px;
+  max-height: 284px;
+}
+
+.iFrame p{
+  margin-top: 1px;
+}
+
+/* -------------------------MEDIA QUERY------------------------- */
+
+@media screen and (max-width: 900px) {
+  /* HEADER-MEDIAQUERY */
+
+  .img-logo {
+    height: 30px;
+  }
+
+  .inputGroup {
+    margin-left: 20px;
+  }
+
+  #labil {
+    padding-top: 14px;
+    left: -10px;
+  }
+
+  .inputGroup :is(input:focus, input:valid) ~ label {
+    transform: translateY(-80%);
+    margin: 0em;
+    margin-left: 0em;
+    padding: 0.4em;
+  }
+
+  .linkss {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+
+    margin-left: -20px;
+    width: 610px;
+  }
+
+  .linkss::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar {
+    font-size: 15px;
+    margin: 0 9px 0 9px;
+  }
+
+  nav {
+    margin: 0;
+    padding: 10px 30px 0 30px;
+  }
+
+  body {
+    height: 100vh;
+  }
+
+  main {
+    margin-top: 110px;
+  }
+
+  /* MAIN-MEDIAQUERY */
+
+  main {
+    padding-left: 30px;
+    margin-top: 90px;
+  }
+
+  h2 {
+    margin-top: 6px;
+  }
+
+  h3 {
+    font-size: -18px;
+  }
+
+  p {
+    font-size: 14px;
+    width: 300px;
+  }
+
+  /* BOTOES-MEDIAQUERY */
+
+  .botao-assistir {
+    width: 29.8vw;
+    padding-right: 5px;
+  }
+  #botao-lista {
+    width: 29.8vw;
+  }
+
+  .iFrame {
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  /* IFRAME E AJUSTE NO BACKGROUND(não sabia ajustar o background de outra forma) */
+
+  iframe {
+    min-width: 50px;
+    max-width: 359px;
+    min-height: 140px;
+    max-height: 190px;
+  }
+
+  body {
+    background-repeat: repeat;
+  }
+}
